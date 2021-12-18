@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct EmptyView: View {
+    let constant = ConstantFavoriteView()
     var body: some View {
-        EmptyAnimationView(jsonFile: "not-found")
+        EmptyAnimationView(jsonFile: constant.favoriteNotFoundJson)
             .overlay(
-                Text("Please add your favorite game.")
+                Text(constant.favoriteNotFoundTitle)
                     .foregroundColor(.gray)
                     .font(.largeTitle)
                     .padding(.top,100)

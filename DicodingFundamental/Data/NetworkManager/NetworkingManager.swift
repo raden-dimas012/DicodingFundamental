@@ -12,11 +12,10 @@ class NetworkingManager {
     enum NetworkingError: LocalizedError {
         case badURLResponse(url: URL)
         case unknown
-        // change !!
         var errorDescription: String? {
             switch self {
-            case .badURLResponse(url: let url): return "[🔥] Bad response from URL: \(url)"
-            case .unknown: return "[⚠️] Unknown error."
+            case .badURLResponse(url: let url): return "Bad response from URL: \(url)"
+            case .unknown: return "Unknown error."
             }
         }
     }

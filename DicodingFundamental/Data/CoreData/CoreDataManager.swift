@@ -10,14 +10,14 @@ import CoreData
 
 class CoreDataManager {
     static let instance = CoreDataManager()
-
+    let constant = ConstantCoreData()
     var container: NSPersistentContainer
     let context: NSManagedObjectContext
     init() {
-        container = NSPersistentContainer(name: "FavoriteGame")
+        container = NSPersistentContainer(name: constant.titleContainer)
         container.loadPersistentStores { ( _ ,error)  in
             if let error = error {
-                print("Error loading core data.\(error)")
+                print("\(error)")
             }
         }
         context = container.viewContext
@@ -26,9 +26,9 @@ class CoreDataManager {
     func save() {
         do {
             try context.save()
-            print("Saved Successfully")
+            print(constant.savedCoreDataSuccess)
         } catch let error {
-            print("ERROR Save Data..\(error)")
+            print("\(error)")
         }
     }
 }

@@ -24,7 +24,6 @@ class ReminderManager {
                 print("ERROR\(error)")
             } else {
                 print("SUCCESS\(success)")
-
             }
         }
     }

@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct DicodingFundamentalApp: App {
     let coreDataManager = CoreDataManager.instance
+    let constant = ConstantApp()
     @Environment(\.scenePhase) var scenePhase
     var body: some Scene {
         WindowGroup {
@@ -18,14 +19,14 @@ struct DicodingFundamentalApp: App {
         }.onChange(of: scenePhase ) { (newScenePhase) in
             switch newScenePhase {
             case .background:
-                print("background")
+                print(constant.backgroundLifeCycle)
                 coreDataManager.save()
             case .inactive:
-                print("inactive")
+                print(constant.inactiveLifeCycle)
             case .active:
-                print("active")
+                print(constant.activeLifeCycle)
             @unknown default:
-                print("something must have changed")
+                print(constant.defaultLifeCycle)
             }
         }
     }

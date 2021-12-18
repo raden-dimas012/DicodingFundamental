@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct LoadingView: View {
+    let constant = ConstantHomeView()
     var body: some View {
-        LoadingAnimationView(jsonFile: "loading")
+        LoadingAnimationView(jsonFile: constant.loadingJson)
             .overlay(
-                Text("Loading....")
+                Text(constant.loadingViewTitle)
                     .foregroundColor(.gray)
                     .font(.largeTitle)
                 ,alignment: .center)

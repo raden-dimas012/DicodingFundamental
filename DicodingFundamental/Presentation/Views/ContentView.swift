@@ -26,6 +26,7 @@
  - Readmore in detail desc
  - Figma
  - Add tap gesture on profile photo
+ - Change reminder content notif
  */
 
 import SwiftUI

@@ -5,14 +5,18 @@
 //  Created by Raden Dimas on 10/10/21.
 //
 
+struct ConstantApp {
+    let backgroundLifeCycle = "background"
+    let inactiveLifeCycle = "inactive"
+    let activeLifeCycle = "active"
+    let defaultLifeCycle = "something must have changed."
+}
 struct ConstantApi {
-//    let baseURL = "https://api.rawg.io/api/games?key=1923047721a645bda224a2a46010ecdd&page=12"
     let baseURL = "https://api.rawg.io/api/games?"
     let apiKey = "key=1923047721a645bda224a2a46010ecdd"
     let page = "&page=12"
     let detailBaseURL = "https://api.rawg.io/api/games"
 }
-
 struct ConstantContentView {
     let home = "Home"
     let favorite = "Favorite"
@@ -23,10 +27,10 @@ struct ConstantContentView {
     let imageSettings = "gearshape"
     let imageProfile = "person.circle"
 }
-
 struct ConstantFavoriteView {
+    let favoriteNotFoundJson = "not-found"
+    let favoriteNotFoundTitle = "Please add your favorite game."
 }
-
 struct ConstantSettingsView {
     let titleDisplaySettings = "Display"
     let descriptionThemeMode = "System Settings will override Dark mode and use the current device theme."
@@ -39,7 +43,6 @@ struct ConstantSettingsView {
     let reminderTitle = "Reminder"
     let imageReminder = "alarm.fill"
 }
-
 struct ConstantProfileView {
     let name = "Name"
     let birth = "Birth"
@@ -55,12 +58,34 @@ struct ConstantProfileView {
     let imageEmail = "envelope.circle"
     let imageRole = "bag.fill"
 }
-
 struct ConstantHomeView {
+    let loadingJson = "loading"
+    let loadingViewTitle = "Loading"
 }
-
 struct ConstantDetailView {
+    let navTitle = "Detail"
+    let iconAddToFavorite = "heart"
+    let iconRemovedFromFavorite = "heart.fill"
+    let titleAddToFavorite = "Add to favorite"
+    let titleRemovedFromFavorite = "Remove from favorite"
+    let titleVisitWebsiteGame = "Visit Game Website"
+    let titleNameGame = "Title"
+    let releaseTitleGame = "Release"
+    let descriptionTitleGame = "Description"
+    let ratingAndReviewsTitleGame = "Rating and Reviews"
+    let ratingTitleGame = "Rating"
+    let reviewsTitleGame = "Total Reviews"
+    let titleLinkErrorAlert = "There was an error"
+    let messageLinkErrorAlert = "Link for website not found!"
+    let defaultLinkAlert = "Error Not Found"
+    let addToFavoriteTitleAlert = "Success"
+    let addToFavoriteMessageAlert = "Game added to favorite"
+    let removedFromFavoriteTitleAlert = "Success"
+    let removedFromFavoriteMessageAlert = "Game removed from favorite"
+    let defaultFavoriteAlert = "Error Not Found"
+    let confirmAlert = "OK"
 }
-
-struct ConstantCustomsView {
+struct ConstantCoreData {
+    let titleContainer = "FavoriteGame"
+    let savedCoreDataSuccess = "saved successfully"
 }

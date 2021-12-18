@@ -11,6 +11,7 @@ import Kingfisher
 struct DetailView: View {
     @StateObject var vm: GameDetailViewModel
     let id: Int
+    let constant = ConstantDetailView()
     @State var isFavorite: Bool = false
     @State var isLoading: Bool = true
     @State var linkAlertType: LinkAlerts?
@@ -44,11 +45,11 @@ struct DetailView: View {
                         self.showFavoriteAlert.toggle()
                     }, label: {
                         HStack {
-                            Image(systemName: self.isFavorite ? "heart.fill" : "heart")
+                            Image(systemName: self.isFavorite ? constant.iconRemovedFromFavorite : constant.iconAddToFavorite)
                                 .resizable()
                                 .foregroundColor(Color.white)
                                 .frame(width: 20, height: 18)
-                            Text(self.isFavorite ? "Remove from favorite" : "Add to favorite")
+                            Text(self.isFavorite ? constant.titleRemovedFromFavorite : constant.titleAddToFavorite)
                                 .foregroundColor(Color.white)
                         }
                         .frame(maxWidth: 350)
@@ -57,6 +58,9 @@ struct DetailView: View {
                         .cornerRadius(15)
                     })
                         .padding(.leading,15)
+                        .alert(isPresented: $showFavoriteAlert, content: {
+                            getFavoriteAlert()
+                        })
                     Spacer()
                     Button(action: {
                         if vm.website != "" {
@@ -64,11 +68,11 @@ struct DetailView: View {
                             self.linkAlertType = nil
                             openURL(URL(string: vm.website ?? "")!)
                         } else {
-                            self.showLinkAlert.toggle()
+                            self.showLinkAlert = true
                             self.linkAlertType = .error
                         }
                     }, label: {
-                        Text("Visit Game Website")
+                        Text(constant.titleVisitWebsiteGame)
                             .frame(maxWidth: 350)
                             .frame(height: 55)
                             .foregroundColor(Color.white)
@@ -76,8 +80,11 @@ struct DetailView: View {
                             .cornerRadius(15)
                     })
                         .padding(.trailing,15)
+                        .alert(isPresented: $showLinkAlert, content: {
+                            getLinkAlert()
+                        })
                 }
-                Text("Title")
+                Text(constant.titleNameGame)
                     .font(.system(size: 24))
                     .fontWeight(.bold)
                     .padding(.leading,15)
@@ -88,7 +95,7 @@ struct DetailView: View {
                     .padding(.leading,15)
                     .padding(.bottom,10)
                     .frame(maxWidth:.infinity,alignment: .leading)
-                Text("Release")
+                Text(constant.releaseTitleGame)
                     .font(.system(size: 24))
                     .fontWeight(.bold)
                     .padding(.leading,15)
@@ -99,7 +106,7 @@ struct DetailView: View {
                     .padding(.leading,15)
                     .padding(.bottom,10)
                     .frame(maxWidth:.infinity,alignment: .leading)
-                Text("Description")
+                Text(constant.descriptionTitleGame)
                     .font(.system(size: 24))
                     .fontWeight(.bold)
                     .padding(.leading,15)
@@ -110,7 +117,7 @@ struct DetailView: View {
                     .padding(.horizontal,15)
                     .padding(.bottom,10)
                     .frame(maxWidth:.infinity,alignment: .leading)
-                Text("Rating and Reviews")
+                Text(constant.ratingAndReviewsTitleGame)
                     .font(.system(size: 24))
                     .fontWeight(.bold)
                     .padding(.leading,15)
@@ -130,12 +137,12 @@ struct DetailView: View {
                             .padding(.vertical,5)
                     }
                     HStack {
-                        Text("Rating")
+                        Text(constant.ratingTitleGame)
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                             .padding(.leading,25)
                         Spacer()
-                        Text("Total Reviews")
+                        Text(constant.reviewsTitleGame)
                             .font(.system(size: 20))
                             .fontWeight(.bold)
                             .padding(.trailing,25)
@@ -157,14 +164,8 @@ struct DetailView: View {
                 }
             }
         })
-        .alert(isPresented: $showLinkAlert, content: {
-            getLinkAlert()
-        })
-        .alert(isPresented: $showFavoriteAlert, content: {
-            getFavoriteAlert()
-        })
         .frame(maxWidth:.infinity,maxHeight: .infinity)
-        .navigationBarTitle("Detail",displayMode: .inline)
+        .navigationBarTitle(constant.navTitle,displayMode: .inline)
     }
     func isLoadingChecking() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -174,19 +175,19 @@ struct DetailView: View {
     func getLinkAlert() -> Alert {
         switch linkAlertType {
         case .error:
-            return Alert(title: Text("There was an error"), message: Text("Link for website not found!"), dismissButton: .cancel())
+            return Alert(title: Text(constant.titleLinkErrorAlert), message: Text(constant.messageLinkErrorAlert), dismissButton: .cancel())
         default:
-            return Alert(title: Text("Error Not Found"))
+            return Alert(title: Text(constant.defaultLinkAlert))
         }
     }
     func getFavoriteAlert() -> Alert {
         switch favoriteAlertType {
         case .addToFavorite:
-            return Alert(title: Text("Success"), message: Text("Game added to favorite"), dismissButton: .default(Text("OK")))
+            return Alert(title: Text(constant.addToFavoriteTitleAlert), message: Text(constant.addToFavoriteMessageAlert), dismissButton: .default(Text(constant.confirmAlert)))
         case .removeFromFavorite:
-            return Alert(title: Text("Success"), message: Text("Game removed from favorite"), dismissButton: .default(Text("OK")))
+            return Alert(title: Text(constant.removedFromFavoriteTitleAlert), message: Text(constant.removedFromFavoriteMessageAlert), dismissButton: .default(Text(constant.confirmAlert)))
         default:
-            return Alert(title: Text("Error Not Found"))
+            return Alert(title: Text(constant.defaultFavoriteAlert))
         }
     }
 }
