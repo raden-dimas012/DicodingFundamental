@@ -43,6 +43,7 @@
 		E9B52B6E2732B69D006CB7F1 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B52B6D2732B69D006CB7F1 /* GameDetail.swift */; };
 		E9B52B702732D527006CB7F1 /* GameDetailDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B52B6F2732D527006CB7F1 /* GameDetailDataService.swift */; };
 		E9D9CAC727159B030091BE8F /* GameDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D9CAC627159B030091BE8F /* GameDetailViewModel.swift */; };
+		E9FA2F6B2779E8260080421D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9FA2F6A2779E8260080421D /* LaunchScreen.storyboard */; };
 		E9FB037327192F370003CA59 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB037227192F370003CA59 /* GameListView.swift */; };
 		E9FF97FA2747A3B400167066 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E9FF97F92747A3B400167066 /* Lottie */; };
 		E9FF97FC2747A9A600167066 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = E9FF97FB2747A9A600167066 /* loading.json */; };
@@ -99,6 +100,7 @@
 		E9B52B6D2732B69D006CB7F1 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
 		E9B52B6F2732D527006CB7F1 /* GameDetailDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailDataService.swift; sourceTree = "<group>"; };
 		E9D9CAC627159B030091BE8F /* GameDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewModel.swift; sourceTree = "<group>"; };
+		E9FA2F6A2779E8260080421D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9FB037227192F370003CA59 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
 		E9FF97FB2747A9A600167066 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		E9FF97FE2747AA0700167066 /* LoadingAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				E90F67E2270EED8400BC553F /* Assets.xcassets */,
 				E90F67E7270EED8400BC553F /* Info.plist */,
 				E90F67E4270EED8400BC553F /* Preview Content */,
+				E9FA2F6A2779E8260080421D /* LaunchScreen.storyboard */,
 			);
 			path = DicodingFundamental;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				E9ACAC63274B1C0C001CDD24 /* not-found.json in Resources */,
 				E90F67E6270EED8400BC553F /* Preview Assets.xcassets in Resources */,
 				E90F67E3270EED8400BC553F /* Assets.xcassets in Resources */,
+				E9FA2F6B2779E8260080421D /* LaunchScreen.storyboard in Resources */,
 				E9FF97FC2747A9A600167066 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,6 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DicodingFundamental/Preview Content\"";
 				DEVELOPMENT_TEAM = Q6JT9SDQN5;
@@ -655,6 +660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DicodingFundamental/Preview Content\"";
 				DEVELOPMENT_TEAM = Q6JT9SDQN5;
