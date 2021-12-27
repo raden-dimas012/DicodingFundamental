@@ -43,7 +43,7 @@ struct ConstantSettingsView {
     let reminderTitle = "Reminder"
     let imageReminder = "alarm.fill"
     let reminderTitleNotification = "Reminder"
-    let reminderSubTitleNotification = "Come on open the app for watching new movie!"
+    let reminderSubTitleNotification = "Let's open the app for see the latest game release!"
 }
 struct ConstantProfileView {
     let name = "Name"
