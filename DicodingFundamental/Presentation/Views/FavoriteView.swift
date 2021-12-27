@@ -10,7 +10,6 @@ import SwiftUI
 struct FavoriteView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(entity: FavoriteEntity.entity(), sortDescriptors:[NSSortDescriptor(keyPath: \FavoriteEntity.name, ascending: true)]) private var gameFavorite: FetchedResults<FavoriteEntity>
-    @StateObject var viewModel = FavoriteViewModel()
 
     var body: some View {
         if gameFavorite.isEmpty {
