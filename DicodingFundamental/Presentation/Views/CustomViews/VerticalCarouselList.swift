@@ -24,7 +24,6 @@ struct VerticalCarouselList<Content: View>: UIViewRepresentable {
         let hostView = UIHostingController(rootView: content)
         hostView.view.backgroundColor = .clear
         hostView.view.translatesAutoresizingMaskIntoConstraints = false
-        // check for isActive if work or not
         let constraints = [
             hostView.view.topAnchor.constraint(equalTo: scrollView.topAnchor),
             hostView.view.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),

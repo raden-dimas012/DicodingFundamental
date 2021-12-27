@@ -5,30 +5,6 @@
 //  Created by Raden Dimas on 07/10/21.
 //
 
-/*
- - Loading Screen wheen load data (done)
- - Launchscreen
- - Using CoreData for save data to favorie and show it (done)
- - Detail View UI (done)
- - Favorite View UI (done)
- - Profile View UI (done)
- - Settings View UI (Dark mode & local notification or push notifications) (done)
- - Unit Testing
- - Implement DI if i can and singleton pattern
- - No Item View for when data is nothing or null (done)
- - Assets for UI
- - Lottie Animation / Redaction Loading (done)
- - Convert Format Date
- - Checking Network First
- - Change all the strings to constant
- - Cache Image
- - SwiftLint
- - Readmore in detail desc
- - Figma
- - Add tap gesture on profile photo
- - Change reminder content notif
- */
-
 import SwiftUI
 
 struct ContentView: View {

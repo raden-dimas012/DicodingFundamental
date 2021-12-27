@@ -23,7 +23,6 @@
 		E92ABB0727339922004A6CDE /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92ABB0627339922004A6CDE /* NetworkingManager.swift */; };
 		E936A2A02719C6FD00A80131 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A29F2719C6FD00A80131 /* Profile.swift */; };
 		E936A2A22719C81D00A80131 /* SystemThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E936A2A12719C81D00A80131 /* SystemThemeManager.swift */; };
-		E948563A273A962E008EAEF5 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9485639273A962E008EAEF5 /* FavoriteViewModel.swift */; };
 		E95BEC312734CDCD008E826F /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BEC302734CDCD008E826F /* DateConverter.swift */; };
 		E95BEC352734D6EE008E826F /* FavoriteGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E95BEC332734D6EE008E826F /* FavoriteGame.xcdatamodeld */; };
 		E95BEC372734D79F008E826F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BEC362734D79F008E826F /* CoreDataManager.swift */; };
@@ -80,7 +79,6 @@
 		E92ABB0627339922004A6CDE /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		E936A29F2719C6FD00A80131 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		E936A2A12719C81D00A80131 /* SystemThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemThemeManager.swift; sourceTree = "<group>"; };
-		E9485639273A962E008EAEF5 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		E95BEC302734CDCD008E826F /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		E95BEC342734D6EE008E826F /* FavoriteGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteGame.xcdatamodel; sourceTree = "<group>"; };
 		E95BEC362734D79F008E826F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				E90F6800270F269700BC553F /* GameViewModel.swift */,
 				E9D9CAC627159B030091BE8F /* GameDetailViewModel.swift */,
 				E962C9F22734052D0072BCD8 /* ProfileViewModel.swift */,
-				E9485639273A962E008EAEF5 /* FavoriteViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -483,7 +480,6 @@
 				E9FB037327192F370003CA59 /* GameListView.swift in Sources */,
 				E962C9F32734052D0072BCD8 /* ProfileViewModel.swift in Sources */,
 				E90F67F3270F16FA00BC553F /* FavoriteView.swift in Sources */,
-				E948563A273A962E008EAEF5 /* FavoriteViewModel.swift in Sources */,
 				E90F67DF270EED8300BC553F /* DicodingFundamentalApp.swift in Sources */,
 				E95BEC352734D6EE008E826F /* FavoriteGame.xcdatamodeld in Sources */,
 				E99C25EA273691A50054B2E6 /* VerticalCarouselList.swift in Sources */,

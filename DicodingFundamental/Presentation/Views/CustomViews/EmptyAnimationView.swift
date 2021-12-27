@@ -20,7 +20,6 @@ struct EmptyAnimationView: UIViewRepresentable {
         animationView.play()
         animationView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(animationView)
-        // change to isActivated is true
         NSLayoutConstraint.activate([
             animationView.widthAnchor.constraint(equalTo: view.widthAnchor),
             animationView.heightAnchor.constraint(equalTo: view.widthAnchor)

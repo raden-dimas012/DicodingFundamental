@@ -10,6 +10,7 @@ import UserNotifications
 
 class ReminderManager {
     static let instance = ReminderManager()
+    let constant = ConstantSettingsView()
     func setUpReminder(isReminder: Bool) {
         if isReminder {
             scheduleNotification()
@@ -29,8 +30,8 @@ class ReminderManager {
     }
     func scheduleNotification() {
         let content = UNMutableNotificationContent()
-        content.title = "This is my first notification!"
-        content.subtitle = "This was so easy!"
+        content.title = constant.reminderTitleNotification
+        content.subtitle = constant.reminderSubTitleNotification
         content.sound = .default
         content.badge = 1
         if #available(iOS 15.0, *) {
